@@ -553,10 +553,10 @@ PRODUCT_COPY_FILES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    $(call inherit-product, hardware/xiaomi/aidl/vibrator/vibrator-vendor-product.mk)
+    vendor.qti.hardware.vibrator.service.xiaomi
 
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator-V1-ndk_platform.vendor
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/excluded-input-devices.xml
 
 # VNDK
 PRODUCT_COPY_FILES += \
