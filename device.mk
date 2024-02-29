@@ -135,6 +135,9 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
+PRODUCT_SYSTEM_PROPERTIES += \
+    dalvik.vm.dex2oat64.enabled=true
+
 # Device Settings
 PRODUCT_PACKAGES += \
     XiaomiParts
